@@ -1,0 +1,17 @@
+{
+    "name": "yama/mywaapi-php-lib",
+    "description": "This is library for mywaapi https://github.com/yama24/mywaapi",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Yama\\MywaapiPhpLib\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yayan Maulana",
+            "email": "maulana24@live.com"
+        }
+    ],
+    "require": {}
+}
