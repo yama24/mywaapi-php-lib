@@ -38,16 +38,6 @@ class Mywaapi
         return $this->curl('send-message', ['number' => $number, 'message' => $message]);
     }
 
-    public function sendGroupMessage(string $groupId, string $message): string
-    {
-        return $this->curl('send-group-message', ['id' => $groupId, 'message' => $message]);
-    }
-
-    public function sendMedia(string $numberOrGroupId, string $caption, string $file): string
-    {
-        return $this->curl('send-media', ['number' => $numberOrGroupId, 'caption' => $caption, 'file' => $file]);
-    }
-
     public function info(): string
     {
         return $this->curl('info');
@@ -56,5 +46,35 @@ class Mywaapi
     public function isRegistered(string $number): string
     {
         return $this->curl('is-registered', ['number' => $number]);
+    }
+
+    public function setWebhook(string $url): string
+    {
+        return $this->curl('set-webhook', ['url' => $url]);
+    }
+
+    public function getWebhook(): string
+    {
+        return $this->curl('get-webhook');
+    }
+
+    public function sendMedia(string $numberOrGroupId, string $caption, string $file): string
+    {
+        return $this->curl('send-media', ['number' => $numberOrGroupId, 'caption' => $caption, 'file' => $file]);
+    }
+
+    public function sendGroupMessage(string $groupId, string $message): string
+    {
+        return $this->curl('send-group-message', ['id' => $groupId, 'message' => $message]);
+    }
+
+    public function clearMessage(string $numberOrGroupId): string
+    {
+        return $this->curl('clear-message', ['number' => $numberOrGroupId]);
+    }
+
+    public function deleteChat(string $numberOrGroupId): string
+    {
+        return $this->curl('delete-chat', ['number' => $numberOrGroupId]);
     }
 }
