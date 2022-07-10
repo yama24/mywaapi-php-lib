@@ -2,6 +2,7 @@
     "name": "yama/mywaapi-php-lib",
     "description": "This is library for mywaapi https://github.com/yama24/mywaapi",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Yama\\MywaapiPhpLib\\": "src/"
