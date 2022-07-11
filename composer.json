@@ -14,5 +14,10 @@
             "email": "maulana24@live.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    }
 }
